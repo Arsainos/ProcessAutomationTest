@@ -4,6 +4,7 @@ using System.Text;
 using ProcessAutomationTest.Concrete;
 using ProcessAutomationTest.Interfaces;
 using ProcessAutomationTest.Processes.Chain1;
+using ProcessAutomationTest.ReferenceObjects;
 
 namespace ProcessAutomationTest.Chains
 {
@@ -18,9 +19,9 @@ namespace ProcessAutomationTest.Chains
             new ProcessEnd()
         };
 
-        public Chain1(object payloadData)
+        public Chain1(AutomationChainShareObject obj)
         {
-            PayloadData = payloadData;
+            PayloadData = obj;
 
             SetChainMap(processHandlers);
         }
