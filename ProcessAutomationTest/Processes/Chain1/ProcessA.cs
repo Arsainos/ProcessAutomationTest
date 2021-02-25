@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProcessAutomationTest.Processes
+namespace ProcessAutomationTest.Processes.Chain1
 {
     class ProcessA : AbstractProcessHandler
     {    

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using ProcessAutomationTest.Abstracts;
+using ProcessAutomationTest.Processes.Chain1;
 
 namespace ProcessAutomationTest.Chains
 {
@@ -9,11 +10,11 @@ namespace ProcessAutomationTest.Chains
     {
         public Chain1()
         {
-            var ProcessStart = new Processes.ProcessStart();
-            var ProcessA = new Processes.ProcessA();
-            var ProcessB = new Processes.ProcessB();
-            var ProcessC = new Processes.ProcessC();
-            var processEnd = new Processes.ProcessEnd();
+            var ProcessStart = new ProcessStart();
+            var ProcessA = new ProcessA();
+            var ProcessB = new ProcessB();
+            var ProcessC = new ProcessC();
+            var processEnd = new ProcessEnd();
 
             SetChainMap(ProcessStart, new List<Interfaces.IProcessHandler> { ProcessA, ProcessB, ProcessC }, processEnd);
         }
