@@ -8,12 +8,12 @@ using ProcessAutomationTest.ReferenceObjects;
 
 namespace ProcessAutomationTest.Chains
 {
-    class Chain1 : AbstractProcessAutomation
+    class Chain1 : AbstractProcessAutomation<AutomationChainShareObject>
     {
         public Chain1()
         {
             Chain
-                .AddRange(new List<IProcessHandler>()
+                .AddRange(new List<IProcessHandler<AutomationChainShareObject>>()
                 {
                     new ProcessStart(),
                     new ProcessA(),

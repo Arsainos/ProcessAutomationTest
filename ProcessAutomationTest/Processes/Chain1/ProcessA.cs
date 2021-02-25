@@ -6,9 +6,8 @@ using System.Text;
 
 namespace ProcessAutomationTest.Processes.Chain1
 {
-    class ProcessA : AbstractProcessHandler
+    class ProcessA : AbstractProcessHandler<AutomationChainShareObject>
     {    
-
         public override void Execute(AutomationChainShareObject payload)
         {
             payload.Message += "10";

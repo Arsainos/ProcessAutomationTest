@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ProcessAutomationTest.Processes.Chain1
 {
-    class ProcessError : AbstractProcessHandler
+    class ProcessError : AbstractProcessHandler<AutomationChainShareObject>
     {
         public override void Execute(AutomationChainShareObject payload)
         {

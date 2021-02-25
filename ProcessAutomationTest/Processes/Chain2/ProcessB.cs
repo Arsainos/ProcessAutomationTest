@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ProcessAutomationTest.Processes.Chain2
 {
-    class ProcessB : AbstractProcessHandler
+    class ProcessB : AbstractProcessHandler<AutomationChainShareObject>
     {
         public override void Execute(AutomationChainShareObject payload)
         {
@@ -15,7 +15,7 @@ namespace ProcessAutomationTest.Processes.Chain2
 
             Console.WriteLine(payload.Message);
 
-            IProcessAutomation processAutomation = new Chains.Chain1();
+            IProcessAutomation<AutomationChainShareObject> processAutomation = new Chains.Chain1();
             processAutomation.RunChain(payload);
 
             Console.WriteLine($"Done executing ProcessB.\n");

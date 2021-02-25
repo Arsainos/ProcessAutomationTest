@@ -7,10 +7,10 @@ using System.Text;
 
 namespace ProcessAutomationTest.Abstracts
 {
-    abstract class AbstractProcessAutomation : IProcessAutomation
+    abstract class AbstractProcessAutomation<T> : IProcessAutomation<T>
     {
-        public List<IProcessHandler> Chain { get; protected set; }
-        public void RunChain(AutomationChainShareObject payload)
+        public List<IProcessHandler<T>> Chain { get; protected set; }
+        public void RunChain(T payload)
         {
             foreach (var process in Chain)
             {
@@ -20,7 +20,7 @@ namespace ProcessAutomationTest.Abstracts
 
         public AbstractProcessAutomation()
         {
-            this.Chain = new List<IProcessHandler>();
+            this.Chain = new List<IProcessHandler<T>>();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ProcessAutomationTest.Processes.Chain2
 {
-    class ProcessStart : AbstractProcessHandler, IProcessStart
+    class ProcessStart : AbstractProcessHandler<AutomationChainShareObject>
     {
         public override void Execute(AutomationChainShareObject payload)
         {

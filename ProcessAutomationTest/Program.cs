@@ -9,10 +9,10 @@ namespace ProcessAutomationTest
     {
         static void Main(string[] args)
         {
-            IProcessAutomation processAutomation = new Chains.Chain1();
+            IProcessAutomation<AutomationChainShareObject> processAutomation = new Chains.Chain1();
             processAutomation.RunChain(new AutomationChainShareObject() { ID = 1, Message = "10" });
 
-            IProcessAutomation processAutomation2 = new Chains.Chain2();
+            IProcessAutomation<AutomationChainShareObject> processAutomation2 = new Chains.Chain2();
             processAutomation2.RunChain(new AutomationChainShareObject() { ID = 1, Message = "20" });
 
             Console.ReadLine();

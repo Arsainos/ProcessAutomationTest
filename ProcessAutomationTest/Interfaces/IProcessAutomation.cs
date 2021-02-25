@@ -5,8 +5,8 @@ using System.Text;
 
 namespace ProcessAutomationTest.Interfaces
 {
-    public interface IProcessAutomation
+    public interface IProcessAutomation<T>
     {
-        void RunChain(AutomationChainShareObject payload);
+        void RunChain(T payload);
     }
 }

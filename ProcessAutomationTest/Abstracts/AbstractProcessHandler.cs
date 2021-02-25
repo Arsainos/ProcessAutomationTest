@@ -6,8 +6,8 @@ using System.Text;
 
 namespace ProcessAutomationTest.Abstracts
 {
-    abstract class AbstractProcessHandler : IProcessHandler
+    abstract class AbstractProcessHandler<T> : IProcessHandler<T>
     {
-        public abstract void Execute(AutomationChainShareObject payload);
+        public abstract void Execute(T payload);
     }
 }
