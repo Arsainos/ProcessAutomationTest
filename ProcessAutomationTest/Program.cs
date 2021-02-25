@@ -11,6 +11,9 @@ namespace ProcessAutomationTest
             IProcessAutomation processAutomation = new Chains.Chain1();
             processAutomation.RunChain();
 
+            IProcessAutomation processAutomation2 = new Chains.Chain2();
+            processAutomation2.RunChain();
+
             Console.ReadLine();
         }
     }
