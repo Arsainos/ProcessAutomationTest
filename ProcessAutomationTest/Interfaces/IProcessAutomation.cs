@@ -7,5 +7,6 @@ namespace ProcessAutomationTest.Interfaces
     public interface IProcessAutomation
     {
         void RunChain();
+        void SetChainMap(List<IProcessHandler> handlers);
     }
 }
