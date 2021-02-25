@@ -7,9 +7,9 @@ namespace ProcessAutomationTest.Processes.Chain1
 {
     class ProcessError : AbstractProcessHandler
     {
-        public override void Execute()
+        public override void Execute(ref object payload)
         {
-            Console.WriteLine($"Error occured. Rollback.\n");
+            Console.WriteLine($"Error Occured. Rollback.\n");
         }
     }
 }

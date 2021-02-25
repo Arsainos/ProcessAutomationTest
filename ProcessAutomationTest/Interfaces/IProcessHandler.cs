@@ -6,9 +6,6 @@ namespace ProcessAutomationTest.Interfaces
 {
     public interface IProcessHandler
     {
-        IProcessHandler SetNext(IProcessHandler handler);
-        IProcessHandler SetError(IProcessHandler handler);
-        IProcessHandler GetLastHandler();
-        object Handle();
+        void Execute(ref object payload);
     }
 }

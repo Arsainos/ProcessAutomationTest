@@ -1,22 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ProcessAutomationTest.Abstracts;
+using ProcessAutomationTest.Concrete;
+using ProcessAutomationTest.Interfaces;
 using ProcessAutomationTest.Processes.Chain1;
 
 namespace ProcessAutomationTest.Chains
 {
-    class Chain1 : AbstractProcessAutomation
+    class Chain1 : ProcessAutomation
     {
-        public Chain1()
-        {
-            var ProcessStart = new ProcessStart();
-            var ProcessA = new ProcessA();
-            var ProcessB = new ProcessB();
-            var ProcessC = new ProcessC();
-            var processEnd = new ProcessEnd();
+        List<IProcessHandler> processHandlers => new List<IProcessHandler>() 
+        { 
+            new ProcessStart(),  
+            new ProcessA(),
+            new ProcessB(),
+            new ProcessC(),
+            new ProcessEnd()
+        };
 
-            SetChainMap(ProcessStart, new List<Interfaces.IProcessHandler> { ProcessA, ProcessB, ProcessC }, processEnd);
+        public Chain1(object payloadData)
+        {
+            PayloadData = payloadData;
+
+            SetChainMap(processHandlers);
         }
     }
 }

@@ -8,9 +8,9 @@ namespace ProcessAutomationTest.Processes.Chain2
 {
     class ProcessB : AbstractProcessHandler
     {
-        public override void Execute()
+        public override void Execute(ref object payload)
         {
-            IProcessAutomation processAutomation = new Chains.Chain1();
+            IProcessAutomation processAutomation = new Chains.Chain1(payload);
             processAutomation.RunChain();
 
             Console.WriteLine($"Done executing ProcessB.\n");

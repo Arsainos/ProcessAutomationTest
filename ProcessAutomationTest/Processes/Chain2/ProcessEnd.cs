@@ -8,7 +8,7 @@ namespace ProcessAutomationTest.Processes.Chain2
 {
     class ProcessEnd : AbstractProcessHandler, IProcessEnd
     {
-        public override void Execute()
+        public override void Execute(ref object payload)
         {
             Console.WriteLine($"End chain 2.\n");
         }

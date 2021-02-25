@@ -7,7 +7,7 @@ namespace ProcessAutomationTest.Processes.Chain1
 {
     class ProcessC : AbstractProcessHandler
     {
-        public override void Execute()
+        public override void Execute(ref object payload)
         {
             Console.WriteLine($"Done executing ProcessC.\n");
         }
