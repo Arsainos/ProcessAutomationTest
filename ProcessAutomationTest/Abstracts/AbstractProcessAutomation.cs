@@ -9,7 +9,7 @@ namespace ProcessAutomationTest.Abstracts
 {
     abstract class AbstractProcessAutomation<T> : IProcessAutomation<T>
     {
-        public List<IProcessHandler<T>> Chain { get; private set; }
+        protected List<IProcessHandler<T>> Chain { get; private set; }
         public void RunChain(T payload)
         {
             foreach (var process in Chain)
