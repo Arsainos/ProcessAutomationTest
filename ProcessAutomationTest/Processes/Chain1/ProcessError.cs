@@ -8,7 +8,7 @@ namespace ProcessAutomationTest.Processes.Chain1
 {
     class ProcessError : AbstractProcessHandler
     {
-        public override void Execute(ref AutomationChainShareObject payload)
+        public override void Execute(AutomationChainShareObject payload)
         {
 
             Console.WriteLine($"Error occured. Rollback.\n");

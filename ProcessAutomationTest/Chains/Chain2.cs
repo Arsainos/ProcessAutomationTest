@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ProcessAutomationTest.Concrete;
+using ProcessAutomationTest.Abstracts;
 using ProcessAutomationTest.Interfaces;
 using ProcessAutomationTest.Processes.Chain2;
 using ProcessAutomationTest.ReferenceObjects;
 
 namespace ProcessAutomationTest.Chains
 {
-    class Chain2 : ProcessAutomation
+    class Chain2 : AbstractProcessAutomation
     {
-        List<IProcessHandler> processHandlers => new List<IProcessHandler>()
+        public Chain2()
         {
-            new ProcessStart(),
-            new ProcessA(),
-            new ProcessB(),
-            new ProcessEnd()
-        };
-
-        public Chain2(AutomationChainShareObject payloadData)
-        {
-            PayloadData = payloadData;
-
-            SetChainMap(processHandlers);
+            Chain
+                .AddRange(new List<IProcessHandler>()
+                {
+                    new ProcessStart(),
+                    new ProcessA(),
+                    new ProcessB(),
+                    new ProcessEnd()
+                });
         }
     }
     

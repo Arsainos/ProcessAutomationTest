@@ -9,14 +9,14 @@ namespace ProcessAutomationTest.Processes.Chain2
 {
     class ProcessB : AbstractProcessHandler
     {
-        public override void Execute(ref AutomationChainShareObject payload)
+        public override void Execute(AutomationChainShareObject payload)
         {
             payload.Message += "10";
 
             Console.WriteLine(payload.Message);
 
-            IProcessAutomation processAutomation = new Chains.Chain1(payload);
-            processAutomation.RunChain();
+            IProcessAutomation processAutomation = new Chains.Chain1();
+            processAutomation.RunChain(payload);
 
             Console.WriteLine($"Done executing ProcessB.\n");
         }

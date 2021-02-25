@@ -9,7 +9,7 @@ namespace ProcessAutomationTest.Processes.Chain2
 {
     class ProcessStart : AbstractProcessHandler, IProcessStart
     {
-        public override void Execute(ref AutomationChainShareObject payload)
+        public override void Execute(AutomationChainShareObject payload)
         {
             Console.WriteLine($"Start chain 2.\n");
         }

@@ -8,7 +8,7 @@ namespace ProcessAutomationTest.Processes.Chain1
 {
     class ProcessB : AbstractProcessHandler
     {
-        public override void Execute(ref AutomationChainShareObject payload)
+        public override void Execute(AutomationChainShareObject payload)
         {
             payload.Message += "10";
 

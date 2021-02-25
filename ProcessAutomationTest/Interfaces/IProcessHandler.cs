@@ -7,6 +7,6 @@ namespace ProcessAutomationTest.Interfaces
 {
     public interface IProcessHandler
     {
-        void Execute(ref AutomationChainShareObject payload);
+        void Execute(AutomationChainShareObject payload);
     }
 }
