@@ -9,7 +9,7 @@ namespace ProcessAutomationTest.Abstracts
     {
         private IProcessHandler _chain;
 
-        public virtual void RunChain()
+        public void RunChain()
         {
             _chain.Handle();
         }
@@ -32,7 +32,7 @@ namespace ProcessAutomationTest.Abstracts
                 {
                     this._chain.GetLastHandler().SetNext(end);
                 }
-            }                               
+            }
         }
     }
 }

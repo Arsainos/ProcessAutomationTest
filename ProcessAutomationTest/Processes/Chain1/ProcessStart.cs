@@ -8,11 +8,9 @@ namespace ProcessAutomationTest.Processes
 {
     class ProcessStart : AbstractProcessHandler, IProcessStart
     {
-        public override object Handle()
+        public override void Execute()
         {
-            Console.WriteLine($"Start Chain.\n");
-
-            return base.Handle();
+            Console.WriteLine($"Start chain.\n");
         }
     }
 }

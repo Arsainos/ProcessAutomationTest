@@ -6,12 +6,10 @@ using System.Text;
 namespace ProcessAutomationTest.Processes
 {
     class ProcessA : AbstractProcessHandler
-    {
-        public override object Handle()
+    {    
+        public override void Execute()
         {
             Console.WriteLine($"Done executing ProcessA.\n");
-
-            return base.Handle();
         }
     }
 }

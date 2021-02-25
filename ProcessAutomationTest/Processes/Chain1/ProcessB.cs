@@ -7,11 +7,9 @@ namespace ProcessAutomationTest.Processes
 {
     class ProcessB : AbstractProcessHandler
     {
-        public override object Handle()
+        public override void Execute()
         {
             Console.WriteLine($"Done executing ProcessB.\n");
-
-            return base.Handle();
         }
     }
 }

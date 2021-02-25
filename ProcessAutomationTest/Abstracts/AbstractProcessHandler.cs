@@ -10,10 +10,14 @@ namespace ProcessAutomationTest.Abstracts
         private IProcessHandler _nextprocessHandler;
         private IProcessHandler _errorProcessHandler;
 
-        public virtual object Handle()
+        public abstract void Execute();
+
+        public object Handle()
         {
             try
             {
+                Execute();
+
                 return RunHandler(this._nextprocessHandler);
             }
             catch 

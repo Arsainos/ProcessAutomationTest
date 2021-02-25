@@ -17,10 +17,5 @@ namespace ProcessAutomationTest.Chains
 
             SetChainMap(ProcessStart, new List<Interfaces.IProcessHandler> { ProcessA, ProcessB, ProcessC }, processEnd);
         }
-
-        public override void RunChain()
-        {
-            base.RunChain();
-        }
     }
 }

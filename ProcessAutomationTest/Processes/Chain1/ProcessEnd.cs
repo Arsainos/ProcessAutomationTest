@@ -8,11 +8,9 @@ namespace ProcessAutomationTest.Processes
 {
     class ProcessEnd : AbstractProcessHandler, IProcessEnd
     {
-        public override object Handle()
+        public override void Execute()
         {
-            Console.WriteLine($"End Chain.\n");
-
-            return base.Handle();
+            Console.WriteLine($"End chain.\n");
         }
     }
 }

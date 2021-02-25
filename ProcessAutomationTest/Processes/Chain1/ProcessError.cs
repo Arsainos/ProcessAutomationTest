@@ -7,9 +7,9 @@ namespace ProcessAutomationTest.Processes
 {
     class ProcessError : AbstractProcessHandler
     {
-        public override object Handle()
+        public override void Execute()
         {
-            return $"Error Occured. Rollback.\n";
+            Console.WriteLine($"Error occured. Rollback.\n");
         }
     }
 }
